@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biodata</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    .kotak-atas {
+      background-color: black;
+      color: green;
+      padding: 20px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .kotak-bawah {
+      background-color: black;
+      color: green;
+      padding: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    input[type="text"] {
+      width: 150px;
+      height: 30px;
+      border-radius: 30px;
+      padding: 5px;
+    }
+
+    button {
+      width: 80px;
+      height: 30px;
+      border-radius: 30px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #result {
+      color: red;
+      margin-top: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="kotak-atas" id="kotak-atas">
+    <h1>Zynn</h1>
+    <p>Web Developer | Student | Gamer</p>
+  </div>
+
+  <div class="kotak-bawah" id="kotak-bawah">
+    <h2>About Me</h2>
+    <p>I'm Zynn. My real name is Chairu Alifone Usman. I live with my parents and brother. My address is Duri City, Khayangan Street.</p>
+    <h3>YOU HAVE OPENED THIS FILE. ENTER THE CODE FROM ZYNN OR YOUR DATA WILL BE LEAKED!</h3>
+  </div>
+
+  <input type="text" id="hacking" placeholder="ENTER CODE">
+  <br>
+  <button id="tombol">ENTER</button>
+  <h4 id="result"></h4>
+
+  <script>
+    const atas = document.getElementById("kotak-atas");
+    const bawah = document.getElementById("kotak-bawah");
+    const text = document.getElementById("hacking");
+    const click = document.getElementById("tombol");
+    const hasil = document.getElementById("result");
+
+    click.addEventListener("click", function () {
+      const kode = text.value.trim();
+
+      if (kode === "Zynn0011") {
+        hasil.innerHTML = "KODE BENAR! AKSES DIBERIKAN.";
+        hasil.style.color = "green";
+      } else {
+        hasil.innerHTML = "MASUKKAN KODE YANG BENAR";
+        atas.style.display = "none";
+        bawah.style.display = "none";
+        text.style.display = "none";
+        click.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
